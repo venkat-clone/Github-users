@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Github_users</string>
+    <string name="search_the_git_hub_id_to_get_results">Search the github id to show results</string>
+    <string name="search_">Search</string>
+    <string name="title_activity_user_screen">User_Screen</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="_0000">0000</string>
+    <string name="followers">followers</string>
+    <string name="following">following</string>
+    <string name="repositories">repositories</string>
+    <string name="open">open</string>
+    <string name="clone">clone</string>
+    <string name="title_activity_demo">demo</string>
+    <string name="endresults">end of results</string>
+</resources>

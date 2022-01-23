@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.CircularRevealRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/repoIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_baseline_library_books_24" />
+
+    <TextView
+        android:id="@+id/reponame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/repoIcon"
+        android:layout_marginTop="-5dp"
+        android:layout_toStartOf="@+id/repoOpen"
+        android:layout_toEndOf="@+id/repoIcon"
+        android:paddingEnd="30dp"
+        android:text=""
+        android:textColor="@color/blue_shade"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/Repo_Decreption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reponame"
+        android:layout_alignStart="@+id/reponame"
+        android:layout_marginTop="5dp"
+        android:paddingEnd="30dp"
+        android:layout_toStartOf="@+id/repoOpen"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/RepoCreated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Repo_Decreption"
+        android:layout_alignStart="@+id/Repo_Decreption"
+        android:layout_gravity="start|center"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/RepoUpdated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Repo_Decreption"
+        android:layout_alignBottom="@+id/RepoCreated"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="0dp"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/repoCopy"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_baseline_file_copy_24" />
+
+    <ImageView
+        android:id="@+id/repoOpen"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toStartOf="@+id/repoCopy"
+        android:src="@drawable/ic_round_reply_24" />
+
+    <TextView
+        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/repoOpen"
+        android:layout_alignStart="@+id/repoOpen"
+        android:layout_alignEnd="@+id/repoOpen"
+        android:text="@string/open"
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/repoCopy"
+        android:layout_alignStart="@+id/repoCopy"
+        android:layout_alignEnd="@+id/repoCopy"
+        android:text="@string/clone"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        tools:ignore="SmallSp" />
+
+    <com.google.android.material.internal.BaselineLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:layout_below="@+id/RepoCreated"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/active_gray"
+        android:paddingBottom="20dp" />
+
+</com.google.android.material.circularreveal.CircularRevealRelativeLayout>

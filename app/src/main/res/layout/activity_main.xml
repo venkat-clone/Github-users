@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@color/black"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchView"
+                android:layout_width="-0dp"
+                android:layout_height="@android:dimen/app_icon_size"
+
+                android:background="@drawable/white_background_rounded"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/space"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:queryHint="@string/search_">
+
+
+            </androidx.appcompat.widget.SearchView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/shapeableImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginStart="20dp"
+                android:background="@color/black"
+                android:src="@drawable/github_mark_light_32px"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Space
+                android:id="@+id/space"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/shapeableImageView"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
+    <AbsoluteLayout
+        android:id="@+id/home_text"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:elevation="0dp"
+        android:textAlignment="center"
+        android:visibility="visible"
+        app:flow_horizontalAlign="start"
+        app:flow_verticalAlign="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
+        tools:ignore="Deprecated,MissingConstraints">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="-0dp"
+            android:layout_y="30dp"
+            android:padding="50dp"
+            android:text="@string/search_the_git_hub_id_to_get_results"
+
+            android:textAlignment="center"
+            android:textSize="26sp">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+
+    </AbsoluteLayout>
+
+    <AbsoluteLayout
+        android:id="@+id/retry_search_view"
+        android:layout_width="300dp"
+        android:layout_height="350dp"
+        android:elevation="0dp"
+        android:textAlignment="center"
+        android:visibility="gone"
+        app:flow_horizontalAlign="start"
+        app:flow_verticalAlign="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
+        tools:ignore="Deprecated,MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-200dp"
+                android:layout_marginBottom="-200dp"
+                android:src="@drawable/octocat"
+                app:tint="@color/active_gray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Network error"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Click to Retry"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+
+    </AbsoluteLayout>
+
+
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
+
+<!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:id="@+id/nested"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/materialToolbar"-->
+<!--        tools:ignore="ExtraText">-->
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/result_list_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foregroundTint="@color/black"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/result_list_"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/end_results"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/endresults"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--    </androidx.core.widget.NestedScrollView>-->
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

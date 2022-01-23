@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.CircularRevealRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/user_logo"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+
+
+        />
+
+    <TextView
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="20dp"
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/user_logo"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        />
+
+    <TextView
+        android:padding="5dp"
+        android:layout_marginStart="20dp"
+        android:id="@+id/user_desreption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_name"
+        android:layout_toEndOf="@+id/user_logo" />
+
+
+</com.google.android.material.circularreveal.CircularRevealRelativeLayout>
